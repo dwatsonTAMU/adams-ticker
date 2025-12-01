@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Open Sans', -apple-system, "Segoe UI", Arial, sans-serif;
+    }
+
+    .ticker-wrapper {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      background: #ffffff;
+      border-left: 4px solid #500000;
+    }
+
+    .ticker-track {
+      position: relative;
+      animation: scroll-up 45s linear infinite;
+      will-change: transform;
+    }
+
+    .ticker-track:hover {
+      animation-play-state: paused;
+    }
+
+    .ticker-item {
+      display: flex;
+      align-items: flex-start;
+      padding: 14px 20px;
+      line-height: 1.6;
+      border-bottom: 1px solid #E0E0E0;
+    }
+
+    .ticker-item:last-child {
+      border-bottom: none;
+    }
+
+    .bullet {
+      display: inline-block;
+      margin-right: 12px;
+      color: #500000;
+      font-size: 18px;
+      line-height: 1.6;
+      flex-shrink: 0;
+      font-weight: 900;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .date {
+      font-size: 12px;
+      color: #666666;
+      font-weight: 600;
+    }
+
+    .title {
+      font-size: 15px;
+      color: #202020;
+      line-height: 1.5;
+    }
+
+    .doc-link {
+      margin-top: 2px;
+    }
+
+    .doc-link a {
+      font-size: 13px;
+      color: #500000;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      border-bottom: 2px solid transparent;
+    }
+
+    .doc-link a:hover {
+      color: #732F2F;
+      border-bottom-color: #732F2F;
+    }
+
+    .doc-link a:visited {
+      color: #3C0000;
+    }
+
+    @keyframes scroll-up {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .ticker-item {
+        padding: 12px 15px;
+      }
+      .title {
+        font-size: 14px;
+      }
+      .bullet {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .ticker-item {
+        padding: 10px 12px;
+      }
+      .title {
+        font-size: 13px;
+      }
+      .date {
+        font-size: 11px;
+      }
+      .doc-link a {
+        font-size: 12px;
+      }
+      .bullet {
+        font-size: 14px;
+        margin-right: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ticker-wrapper">
+    <div class="ticker-track">
+      <!-- Set 1 -->
+      <div class="ticker-set">
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Sep 10, 2025</span>
+            <span class="title">NRC Withholds Proprietary Oklo Data for Aurora Project</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25216A273" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Sep 12, 2025</span>
+            <span class="title">Appalachian Power Updates NRC on Joshua Falls Reactor Site Progress</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25240B537" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Oct 7, 2025</span>
+            <span class="title">NRC Accepts Kairos Power Exemption Requests for Review</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25273A286" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Sep 19, 2025</span>
+            <span class="title">NRC Clarifies Safety Classification for GEH's BWRX-300 Reactor Design</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25175A199" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Oct 3, 2025</span>
+            <span class="title">NRC Approves BWRX-300 Containment Design with Conditions</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25268A141" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Sep 3, 2025</span>
+            <span class="title">Rolls-Royce Introduces Small Modular Reactor Design to US Regulators</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25234A184" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Sep 2, 2025</span>
+            <span class="title">Blue Energy Clarifies Quality Assurance Program with NRC</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25234A176" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Aug 22, 2025</span>
+            <span class="title">NRC Discusses Oklo's Pre-Construction Plans for Idaho Reactor</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25204A140" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Sep 2, 2025</span>
+            <span class="title">NRC Grants JAEA Request to Withhold SMR Seismic System Data</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25227A009" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Sep 10, 2025</span>
+            <span class="title">NRC Seeks More Info on JAEA's Novel Floating SMR Design</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25245A101" target="_blank">View Document</a></span>
+          </div>
+        </div>
+      </div>
+      <!-- Set 2 (duplicate for seamless loop) -->
+      <div class="ticker-set">
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Sep 10, 2025</span>
+            <span class="title">NRC Withholds Proprietary Oklo Data for Aurora Project</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25216A273" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Sep 12, 2025</span>
+            <span class="title">Appalachian Power Updates NRC on Joshua Falls Reactor Site Progress</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25240B537" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Oct 7, 2025</span>
+            <span class="title">NRC Accepts Kairos Power Exemption Requests for Review</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25273A286" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Sep 19, 2025</span>
+            <span class="title">NRC Clarifies Safety Classification for GEH's BWRX-300 Reactor Design</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25175A199" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Oct 3, 2025</span>
+            <span class="title">NRC Approves BWRX-300 Containment Design with Conditions</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25268A141" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Sep 3, 2025</span>
+            <span class="title">Rolls-Royce Introduces Small Modular Reactor Design to US Regulators</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25234A184" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Sep 2, 2025</span>
+            <span class="title">Blue Energy Clarifies Quality Assurance Program with NRC</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25234A176" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Aug 22, 2025</span>
+            <span class="title">NRC Discusses Oklo's Pre-Construction Plans for Idaho Reactor</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25204A140" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Sep 2, 2025</span>
+            <span class="title">NRC Grants JAEA Request to Withhold SMR Seismic System Data</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25227A009" target="_blank">View Document</a></span>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <span class="bullet">•</span>
+          <div class="content">
+            <span class="date">Sep 10, 2025</span>
+            <span class="title">NRC Seeks More Info on JAEA's Novel Floating SMR Design</span>
+            <span class="doc-link"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25245A101" target="_blank">View Document</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
