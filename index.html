@@ -2,26 +2,25 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="frame-ancestors https://*.tamu.edu https://*.wordpress.com;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { 
-      font-family: -apple-system, "Segoe UI", Arial, sans-serif; 
-      font-size: 14px;
-      background: #fff;
+      font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+      background: #500000;
+      overflow: hidden;
     }
     
-    /* Scrolling ticker wrapper */
     .ticker-wrapper {
+      width: 100%;
       overflow: hidden;
-      background: #500000; /* TAMU Maroon */
-      padding: 10px 0;
-      white-space: nowrap;
+      padding: 12px 0;
     }
     
     .ticker-track {
-      display: inline-block;
-      animation: scroll-left 45s linear infinite;
+      display: flex;
+      width: max-content;
+      animation: scroll 40s linear infinite;
     }
     
     .ticker-track:hover {
@@ -29,37 +28,49 @@
     }
     
     .ticker-item {
-      display: inline-block;
-      padding: 0 40px;
+      flex-shrink: 0;
+      padding: 0 30px;
       color: #fff;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-right: 1px solid rgba(255,255,255,0.3);
     }
     
-    .ticker-item a {
+    .ticker-item:last-child {
+      border-right: none;
+    }
+    
+    .date {
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    
+    .doc-id {
+      background: rgba(255,255,255,0.15);
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-family: "Consolas", monospace;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    
+    .doc-id a {
       color: #fff;
       text-decoration: none;
-      font-weight: 500;
     }
     
-    .ticker-item a:hover {
+    .doc-id a:hover {
       text-decoration: underline;
     }
     
-    .ticker-item .date {
-      color: rgba(255,255,255,0.7);
-      font-size: 12px;
-      margin-right: 8px;
+    .title {
+      white-space: nowrap;
     }
     
-    .ticker-item .doc-id {
-      background: rgba(255,255,255,0.2);
-      padding: 2px 6px;
-      border-radius: 3px;
-      font-family: monospace;
-      font-size: 12px;
-      margin-right: 8px;
-    }
-    
-    @keyframes scroll-left {
+    @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
@@ -68,38 +79,38 @@
 <body>
   <div class="ticker-wrapper">
     <div class="ticker-track">
-      <!-- First set -->
-      <span class="ticker-item">
-        <span class="date">2025-05-28</span>
-        <span class="doc-id">ML25148A001</span>
-        <a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25148A001" target="_blank">Staff Requirements - SECY-25-0001 Annual Update</a>
-      </span>
-      <span class="ticker-item">
-        <span class="date">2025-05-27</span>
-        <span class="doc-id">ML25147A002</span>
-        <a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25147A002" target="_blank">Generic Letter on BWR Containment</a>
-      </span>
-      <span class="ticker-item">
-        <span class="date">2025-05-26</span>
-        <span class="doc-id">ML25146A003</span>
-        <a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25146A003" target="_blank">Advanced Reactor Policy Statement Draft</a>
-      </span>
-      <!-- Duplicate set for seamless loop -->
-      <span class="ticker-item">
-        <span class="date">2025-05-28</span>
-        <span class="doc-id">ML25148A001</span>
-        <a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25148A001" target="_blank">Staff Requirements - SECY-25-0001 Annual Update</a>
-      </span>
-      <span class="ticker-item">
-        <span class="date">2025-05-27</span>
-        <span class="doc-id">ML25147A002</span>
-        <a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25147A002" target="_blank">Generic Letter on BWR Containment</a>
-      </span>
-      <span class="ticker-item">
-        <span class="date">2025-05-26</span>
-        <span class="doc-id">ML25146A003</span>
-        <a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25146A003" target="_blank">Advanced Reactor Policy Statement Draft</a>
-      </span>
+      <!-- Set 1 -->
+      <div class="ticker-item">
+        <span class="date">May 28</span>
+        <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25148A001" target="_blank">ML25148A001</a></span>
+        <span class="title">Staff Requirements - SECY-25-0001</span>
+      </div>
+      <div class="ticker-item">
+        <span class="date">May 27</span>
+        <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25147A002" target="_blank">ML25147A002</a></span>
+        <span class="title">Generic Letter on BWR Containment</span>
+      </div>
+      <div class="ticker-item">
+        <span class="date">May 26</span>
+        <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25146A003" target="_blank">ML25146A003</a></span>
+        <span class="title">Advanced Reactor Policy Draft</span>
+      </div>
+      <!-- Set 2 (duplicate for seamless loop) -->
+      <div class="ticker-item">
+        <span class="date">May 28</span>
+        <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25148A001" target="_blank">ML25148A001</a></span>
+        <span class="title">Staff Requirements - SECY-25-0001</span>
+      </div>
+      <div class="ticker-item">
+        <span class="date">May 27</span>
+        <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25147A002" target="_blank">ML25147A002</a></span>
+        <span class="title">Generic Letter on BWR Containment</span>
+      </div>
+      <div class="ticker-item">
+        <span class="date">May 26</span>
+        <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25146A003" target="_blank">ML25146A003</a></span>
+        <span class="title">Advanced Reactor Policy Draft</span>
+      </div>
     </div>
   </div>
 </body>
