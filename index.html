@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <!-- Version: 202512010505 -->
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
@@ -20,7 +21,9 @@
     .ticker-wrapper {
       width: 100%;
       overflow: hidden;
-      padding: 10px 0;
+      height: 42px;
+      display: flex;
+      align-items: center;
       background: #500000;
     }
 
@@ -50,21 +53,27 @@
       color: #fff;
       font-size: 13px;
       border-right: 1px solid rgba(255,255,255,0.3);
+      height: 42px;
+      line-height: 1;
     }
 
     .date {
       color: rgba(255,255,255,0.7);
       font-size: 11px;
       flex-shrink: 0;
+      display: flex;
+      align-items: center;
     }
 
     .doc-id {
       background: rgba(255,255,255,0.15);
-      padding: 3px 6px;
+      padding: 4px 6px;
       border-radius: 3px;
       font-family: "Consolas", "Courier New", monospace;
       font-size: 11px;
       flex-shrink: 0;
+      display: flex;
+      align-items: center;
     }
 
     .doc-id a {
@@ -72,8 +81,14 @@
       text-decoration: none;
     }
 
+    .doc-id a:hover {
+      text-decoration: underline;
+    }
+
     .title {
       flex-shrink: 0;
+      display: flex;
+      align-items: center;
     }
 
     @keyframes scroll {
@@ -83,12 +98,13 @@
 
     @media (max-width: 600px) {
       .ticker-wrapper {
-        padding: 8px 0;
+        height: 38px;
       }
       .ticker-item {
         padding: 0 12px;
         gap: 6px;
         font-size: 11px;
+        height: 38px;
       }
       .date, .doc-id {
         font-size: 10px;
@@ -99,6 +115,7 @@
 <body>
   <div class="ticker-wrapper">
     <div class="ticker-track">
+      <!-- Set 1 -->
       <div class="ticker-set">
         <div class="ticker-item">
           <span class="date">Sep 10</span>
@@ -151,6 +168,7 @@
           <span class="title">NRC Seeks More Info on JAEA's Novel Floating SMR Design</span>
         </div>
       </div>
+      <!-- Set 2 (exact duplicate for seamless loop) -->
       <div class="ticker-set">
         <div class="ticker-item">
           <span class="date">Sep 10</span>
