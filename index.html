@@ -4,11 +4,10 @@
   <meta name="robots" content="noindex, nofollow">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Cache control: force revalidation -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <!-- Version: 202512010407 -->
+  <!-- Version: 202512010418 -->
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -20,7 +19,7 @@
     .ticker-wrapper {
       width: 100%;
       overflow: hidden;
-      padding: 12px 0;
+      padding: 10px 0;
     }
 
     .ticker-track {
@@ -40,28 +39,28 @@
 
     .ticker-item {
       flex-shrink: 0;
-      padding: 0 30px;
+      padding: 0 25px;
       color: #fff;
       font-size: 14px;
       display: flex;
+      flex-direction: row;
       align-items: center;
       gap: 10px;
       border-right: 1px solid rgba(255,255,255,0.3);
+      white-space: nowrap;
     }
 
     .date {
       color: rgba(255,255,255,0.7);
       font-size: 12px;
-      white-space: nowrap;
     }
 
     .doc-id {
       background: rgba(255,255,255,0.15);
       padding: 3px 8px;
       border-radius: 3px;
-      font-family: "Consolas", monospace;
+      font-family: "Consolas", "Courier New", monospace;
       font-size: 12px;
-      white-space: nowrap;
     }
 
     .doc-id a {
@@ -74,12 +73,49 @@
     }
 
     .title {
-      white-space: nowrap;
+      display: inline-block;
+      max-width: 400px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
+    }
+
+    /* Tablet */
+    @media (max-width: 1024px) {
+      .ticker-item {
+        padding: 0 20px;
+        font-size: 13px;
+        gap: 8px;
+      }
+      .title {
+        max-width: 300px;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .ticker-wrapper {
+        padding: 8px 0;
+      }
+      .ticker-item {
+        padding: 0 15px;
+        font-size: 12px;
+        gap: 6px;
+      }
+      .date {
+        font-size: 10px;
+      }
+      .doc-id {
+        font-size: 10px;
+        padding: 2px 6px;
+      }
+      .title {
+        max-width: 220px;
+      }
     }
   </style>
 </head>
