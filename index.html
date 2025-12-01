@@ -3,35 +3,30 @@
 <head>
   <meta name="robots" content="noindex, nofollow">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <!-- Version: 202512010418 -->
   <style>
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
       width: 100%;
-      min-width: 100%;
       overflow-x: hidden;
+      background: #500000;
     }
-    
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, "Segoe UI", Arial, sans-serif;
-      background: #500000;
-      overflow: hidden;
+      line-height: 1;
     }
 
     .ticker-wrapper {
       width: 100%;
       overflow: hidden;
       padding: 10px 0;
+      background: #500000;
     }
 
     .ticker-track {
       display: flex;
-      width: fit-content;
+      width: max-content;
       animation: scroll 90s linear infinite;
     }
 
@@ -45,29 +40,31 @@
     }
 
     .ticker-item {
-      flex-shrink: 0;
-      padding: 0 25px;
-      color: #fff;
-      font-size: 14px;
       display: flex;
       flex-direction: row;
+      flex-shrink: 0;
+      flex-wrap: nowrap;
       align-items: center;
-      gap: 10px;
+      padding: 0 20px;
+      gap: 8px;
+      color: #fff;
+      font-size: 13px;
       border-right: 1px solid rgba(255,255,255,0.3);
-      white-space: nowrap;
     }
 
     .date {
       color: rgba(255,255,255,0.7);
-      font-size: 12px;
+      font-size: 11px;
+      flex-shrink: 0;
     }
 
     .doc-id {
       background: rgba(255,255,255,0.15);
-      padding: 3px 8px;
+      padding: 3px 6px;
       border-radius: 3px;
       font-family: "Consolas", "Courier New", monospace;
-      font-size: 12px;
+      font-size: 11px;
+      flex-shrink: 0;
     }
 
     .doc-id a {
@@ -75,15 +72,8 @@
       text-decoration: none;
     }
 
-    .doc-id a:hover {
-      text-decoration: underline;
-    }
-
     .title {
-      display: inline-block;
-      max-width: 400px;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      flex-shrink: 0;
     }
 
     @keyframes scroll {
@@ -91,37 +81,17 @@
       100% { transform: translateX(-50%); }
     }
 
-    /* Tablet */
-    @media (max-width: 1024px) {
-      .ticker-item {
-        padding: 0 20px;
-        font-size: 13px;
-        gap: 8px;
-      }
-      .title {
-        max-width: 300px;
-      }
-    }
-
-    /* Mobile */
     @media (max-width: 600px) {
       .ticker-wrapper {
         padding: 8px 0;
       }
       .ticker-item {
-        padding: 0 15px;
-        font-size: 12px;
+        padding: 0 12px;
         gap: 6px;
+        font-size: 11px;
       }
-      .date {
+      .date, .doc-id {
         font-size: 10px;
-      }
-      .doc-id {
-        font-size: 10px;
-        padding: 2px 6px;
-      }
-      .title {
-        max-width: 220px;
       }
     }
   </style>
@@ -129,7 +99,6 @@
 <body>
   <div class="ticker-wrapper">
     <div class="ticker-track">
-      <!-- Set 1 -->
       <div class="ticker-set">
         <div class="ticker-item">
           <span class="date">Sep 10</span>
@@ -182,7 +151,6 @@
           <span class="title">NRC Seeks More Info on JAEA's Novel Floating SMR Design</span>
         </div>
       </div>
-      <!-- Set 2 (exact duplicate for seamless loop) -->
       <div class="ticker-set">
         <div class="ticker-item">
           <span class="date">Sep 10</span>
