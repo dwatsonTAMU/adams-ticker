@@ -19,12 +19,17 @@
     
     .ticker-track {
       display: flex;
-      width: max-content;
-      animation: scroll 40s linear infinite;
+      width: fit-content;
+      animation: scroll 90s linear infinite;
     }
     
     .ticker-track:hover {
       animation-play-state: paused;
+    }
+    
+    .ticker-set {
+      display: flex;
+      flex-shrink: 0;
     }
     
     .ticker-item {
@@ -36,10 +41,6 @@
       align-items: center;
       gap: 10px;
       border-right: 1px solid rgba(255,255,255,0.3);
-    }
-    
-    .ticker-item:last-child {
-      border-right: none;
     }
     
     .date {
@@ -80,36 +81,110 @@
   <div class="ticker-wrapper">
     <div class="ticker-track">
       <!-- Set 1 -->
-      <div class="ticker-item">
-        <span class="date">May 28</span>
-        <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25148A001" target="_blank">ML25148A001</a></span>
-        <span class="title">Staff Requirements - SECY-25-0001</span>
+      <div class="ticker-set">
+        <div class="ticker-item">
+          <span class="date">May 28</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25148A001" target="_blank">ML25148A001</a></span>
+          <span class="title">Staff Requirements Memorandum on Advanced Reactor Licensing Modernization and Risk-Informed Approaches</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 27</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25147A002" target="_blank">ML25147A002</a></span>
+          <span class="title">Generic Letter Regarding BWR Mark I and Mark II Containment Reliability Assessment Requirements</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 26</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25146A003" target="_blank">ML25146A003</a></span>
+          <span class="title">Draft Policy Statement on Advanced Reactor Program Implementation and Licensing Framework Updates</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 25</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25145A004" target="_blank">ML25145A004</a></span>
+          <span class="title">Commission Voting Record for SECY-25-0042 on Emergency Core Cooling System Performance Standards</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 24</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25144A005" target="_blank">ML25144A005</a></span>
+          <span class="title">Revised Emergency Preparedness Rule Implementation Guidance for Small Modular Reactor Facilities</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 23</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25143A006" target="_blank">ML25143A006</a></span>
+          <span class="title">Technical Evaluation Report on Kairos Power Hermes Reactor Construction Permit Application Review</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 22</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25142A007" target="_blank">ML25142A007</a></span>
+          <span class="title">Regulatory Guide 1.233 Revision on Fuel Qualification for Advanced Reactor Designs and Materials</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 21</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25141A008" target="_blank">ML25141A008</a></span>
+          <span class="title">NuScale Power Module Design Certification Amendment Request for Thermal Power Uprate to 77 MWt</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 20</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25140A009" target="_blank">ML25140A009</a></span>
+          <span class="title">Inspection Report for Vogtle Electric Generating Plant Units 3 and 4 Operational Readiness Review</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 19</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25139A010" target="_blank">ML25139A010</a></span>
+          <span class="title">NUREG-2263 Final Report on High-Assay Low-Enriched Uranium Transportation Package Certification Standards</span>
+        </div>
       </div>
-      <div class="ticker-item">
-        <span class="date">May 27</span>
-        <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25147A002" target="_blank">ML25147A002</a></span>
-        <span class="title">Generic Letter on BWR Containment</span>
-      </div>
-      <div class="ticker-item">
-        <span class="date">May 26</span>
-        <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25146A003" target="_blank">ML25146A003</a></span>
-        <span class="title">Advanced Reactor Policy Draft</span>
-      </div>
-      <!-- Set 2 (duplicate for seamless loop) -->
-      <div class="ticker-item">
-        <span class="date">May 28</span>
-        <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25148A001" target="_blank">ML25148A001</a></span>
-        <span class="title">Staff Requirements - SECY-25-0001</span>
-      </div>
-      <div class="ticker-item">
-        <span class="date">May 27</span>
-        <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25147A002" target="_blank">ML25147A002</a></span>
-        <span class="title">Generic Letter on BWR Containment</span>
-      </div>
-      <div class="ticker-item">
-        <span class="date">May 26</span>
-        <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25146A003" target="_blank">ML25146A003</a></span>
-        <span class="title">Advanced Reactor Policy Draft</span>
+      <!-- Set 2 (exact duplicate for seamless loop) -->
+      <div class="ticker-set">
+        <div class="ticker-item">
+          <span class="date">May 28</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25148A001" target="_blank">ML25148A001</a></span>
+          <span class="title">Staff Requirements Memorandum on Advanced Reactor Licensing Modernization and Risk-Informed Approaches</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 27</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25147A002" target="_blank">ML25147A002</a></span>
+          <span class="title">Generic Letter Regarding BWR Mark I and Mark II Containment Reliability Assessment Requirements</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 26</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25146A003" target="_blank">ML25146A003</a></span>
+          <span class="title">Draft Policy Statement on Advanced Reactor Program Implementation and Licensing Framework Updates</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 25</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25145A004" target="_blank">ML25145A004</a></span>
+          <span class="title">Commission Voting Record for SECY-25-0042 on Emergency Core Cooling System Performance Standards</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 24</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25144A005" target="_blank">ML25144A005</a></span>
+          <span class="title">Revised Emergency Preparedness Rule Implementation Guidance for Small Modular Reactor Facilities</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 23</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25143A006" target="_blank">ML25143A006</a></span>
+          <span class="title">Technical Evaluation Report on Kairos Power Hermes Reactor Construction Permit Application Review</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 22</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25142A007" target="_blank">ML25142A007</a></span>
+          <span class="title">Regulatory Guide 1.233 Revision on Fuel Qualification for Advanced Reactor Designs and Materials</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 21</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25141A008" target="_blank">ML25141A008</a></span>
+          <span class="title">NuScale Power Module Design Certification Amendment Request for Thermal Power Uprate to 77 MWt</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 20</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25140A009" target="_blank">ML25140A009</a></span>
+          <span class="title">Inspection Report for Vogtle Electric Generating Plant Units 3 and 4 Operational Readiness Review</span>
+        </div>
+        <div class="ticker-item">
+          <span class="date">May 19</span>
+          <span class="doc-id"><a href="https://adamswebsearch2.nrc.gov/webSearch2/main.jsp?AccessionNumber=ML25139A010" target="_blank">ML25139A010</a></span>
+          <span class="title">NUREG-2263 Final Report on High-Assay Low-Enriched Uranium Transportation Package Certification Standards</span>
+        </div>
       </div>
     </div>
   </div>
